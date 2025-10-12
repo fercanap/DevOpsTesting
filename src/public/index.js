@@ -53,6 +53,7 @@
         <li><code>npm test</code> - Ejecutar tests</li>
         <li><code>npm run lint</code> - Verificar código</li>
         <li><code>npm run build</code> - Build completo</li>
+        <li><code>npm run add changes</code> - Agregar cambios al staging</li>
     </ul>
 </body>
 </html>
