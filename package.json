@@ -1,0 +1,36 @@
+{
+  "name": "github-actions-course-app",
+  "version": "1.0.0",
+  "description": "Aplicación de ejemplo para curso de GitHub Actions",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage",
+    "test:unit": "jest --coverage --testPathIgnorePatterns='integration'",
+    "test:integration": "jest --coverage --testPathPattern='integration'",
+    "test:ci": "jest --coverage --ci --reporters=default --reporters=jest-junit",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "build": "npm run lint && npm test"
+  },
+  "keywords": ["github-actions", "ci-cd", "express", "nodejs"],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3",
+    "eslint": "^8.45.0",
+    "nodemon": "^3.0.1",
+    "jest-junit": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
