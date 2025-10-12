@@ -1,0 +1,16 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Simular despliegue en producción
+        run: echo "¡Despliegue a Producción exitoso!"
