@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,11 +6,25 @@ on:
       - main
 
 jobs:
-  deploy-prod:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
+      
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
 
-      - name: Simular despliegue en producción
-        run: echo "¡Despliegue a Producción exitoso!"
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Construir la aplicación
+        run: npm run build # Asume que tienes un script 'build' en tu package.json que genera la carpeta de salida
+
+      - name: Despliegue en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # <-- ¡Aquí está el cambio clave!
