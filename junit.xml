@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="0" errors="0" time="1.396">
+  <testsuite name="Rutas de la API" errors="0" failures="0" skipped="0" timestamp="2025-10-21T00:59:17" time="0.98" tests="5">
+    <testcase classname="Rutas de la API GET /health debe retornar el estado del servidor" name="Rutas de la API GET /health debe retornar el estado del servidor" time="0.053">
+    </testcase>
+    <testcase classname="Rutas de la API POST /calculate debe realizar suma correctamente" name="Rutas de la API POST /calculate debe realizar suma correctamente" time="0.029">
+    </testcase>
+    <testcase classname="Rutas de la API POST /calculate debe realizar resta correctamente" name="Rutas de la API POST /calculate debe realizar resta correctamente" time="0.004">
+    </testcase>
+    <testcase classname="Rutas de la API POST /calculate debe manejar división por cero" name="Rutas de la API POST /calculate debe manejar división por cero" time="0.004">
+    </testcase>
+    <testcase classname="Rutas de la API POST /calculate debe validar parámetros requeridos" name="Rutas de la API POST /calculate debe validar parámetros requeridos" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Aplicación Express" errors="0" failures="0" skipped="0" timestamp="2025-10-21T00:59:18" time="0.108" tests="2">
+    <testcase classname="Aplicación Express debe iniciar correctamente" name="Aplicación Express debe iniciar correctamente" time="0.005">
+    </testcase>
+    <testcase classname="Aplicación Express debe manejar rutas no existentes" name="Aplicación Express debe manejar rutas no existentes" time="0.004">
+    </testcase>
+  </testsuite>
+</testsuites>
